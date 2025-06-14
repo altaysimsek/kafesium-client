@@ -22,8 +22,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const checkAuth = async () => {
     try {
-      const response = await fetch(`${process.env.BACKEND_URL}/api/auth/me`, {
-        credentials: 'include', // Cookie'leri gönder
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/auth/me`, {
+        credentials: 'include',
       });
 
       if (response.ok) {

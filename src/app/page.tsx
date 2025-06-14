@@ -3,8 +3,16 @@ import React from 'react';
 import { Shield, Trophy, Users, Zap, Stamp as Steam } from 'lucide-react';
 import { useAuth } from '@/contexts/auth-context';
 
-function App() {
+export default function Home() {
   const { user, loading } = useAuth();
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-zinc-900 to-black text-white flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-green-500"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 to-black text-white">
@@ -148,6 +156,42 @@ function App() {
                 <div className="text-sm text-gray-400 mt-1">Avg Queue Time</div>
               </div>
             </div>
+
+            {user ? (
+              <div className="space-y-4">
+                <div className="flex items-center justify-center space-x-4">
+                  {user.image && (
+                    <img
+                      src={user.image}
+                      alt={user.name}
+                      className="w-16 h-16 rounded-full"
+                    />
+                  )}
+                  <div className="text-left">
+                    <h2 className="text-xl font-semibold">Hoş geldin, {user.name}!</h2>
+                    <p className="text-gray-400">Turnuvalara katılmaya hazır mısın?</p>
+                  </div>
+                </div>
+                <button
+                  className="mt-4 px-6 py-3 bg-green-500 hover:bg-green-600 rounded-lg font-medium transition-colors"
+                  onClick={() => window.location.href = '/tournaments'}
+                >
+                  Turnuvaları Görüntüle
+                </button>
+              </div>
+            ) : (
+              <div className="space-y-4">
+                <p className="text-xl text-gray-400 mb-8">
+                  Turnuvalara katılmak için Steam hesabınızla giriş yapın.
+                </p>
+                <button
+                  className="px-6 py-3 bg-green-500 hover:bg-green-600 rounded-lg font-medium transition-colors"
+                  onClick={() => window.location.href = `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/auth/steam`}
+                >
+                  Steam ile Giriş Yap
+                </button>
+              </div>
+            )}
           </div>
         </div>
 
@@ -157,5 +201,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
