@@ -7,7 +7,11 @@ interface AuthContextType {
   user: User | null;
 }
 
-const AuthContext = createContext<AuthContextType | undefined>(undefined);
+const defaultContext: AuthContextType = {
+  user: null,
+}
+
+const AuthContext = createContext<AuthContextType>(defaultContext);
 
 export function AuthProvider({ userInitial, children }: { userInitial: User | null, children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(userInitial);
