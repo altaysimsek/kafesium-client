@@ -1,25 +1,16 @@
 import { redirect } from 'next/navigation';
+import { getUserSession } from '@/lib/auth';
 
 export default async function AuthCallback() {
-  try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/auth/me`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      cache: 'no-store'
-    });
+  const user = await getUserSession();
 
-    if (response.ok) {
-      redirect('/');
-    } else {
-      redirect('/auth/error');
-    }
-  } catch (error) {
-    console.error('Callback error:', error);
-    redirect('/auth/error');
+  if (user) {
+    redirect('/');
   }
 
+  redirect('/auth/error');
+
+  // Bu kısım hiçbir zaman çalışmayacak çünkü yukarıdaki redirect'lerden biri her zaman tetiklenecek
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 to-black text-white flex items-center justify-center">
       <div className="text-center">
