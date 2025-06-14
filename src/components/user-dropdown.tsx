@@ -2,6 +2,7 @@
 import { redirect } from 'next/navigation';
 import { useAuth } from '@/contexts/auth-context';
 import { ChevronDown } from 'lucide-react';
+import Image from 'next/image';
 export function UserDropdown() {
   const { user } = useAuth();
 
@@ -10,7 +11,7 @@ export function UserDropdown() {
       <div className="flex items-center space-x-3 group relative">
         <div className="flex items-center space-x-2 cursor-pointer">
           {user.steamProfile.avatar ? (
-            <img
+            <Image
               src={user.steamProfile.avatar}
               alt={user.name}
               className="w-10 h-10 rounded-full border-2 border-green-500"

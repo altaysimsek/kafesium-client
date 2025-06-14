@@ -1,6 +1,5 @@
 import React from 'react';
-import { Shield, Trophy, Users, Zap } from 'lucide-react';
-import { UserDropdown } from '@/components/user-dropdown';
+import { Trophy, Users, Zap } from 'lucide-react';
 
 export default async function Home() {
     return (

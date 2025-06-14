@@ -5,10 +5,12 @@ import { User } from '@/types/user';
 
 interface AuthContextType {
   user: User | null;
+  setUser: (user: User | null) => void;
 }
 
 const defaultContext: AuthContextType = {
   user: null,
+  setUser: () => {},
 }
 
 const AuthContext = createContext<AuthContextType>(defaultContext);
@@ -17,7 +19,7 @@ export function AuthProvider({ userInitial, children }: { userInitial: User | nu
   const [user, setUser] = useState<User | null>(userInitial);
 
   return (
-    <AuthContext.Provider value={{ user }}>
+    <AuthContext.Provider value={{ user, setUser }}>
       {children}
     </AuthContext.Provider>
   );
