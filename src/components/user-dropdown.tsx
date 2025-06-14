@@ -15,6 +15,8 @@ export function UserDropdown() {
               src={user.steamProfile.avatar}
               alt={user.name}
               className="w-10 h-10 rounded-full border-2 border-green-500"
+              width={40}
+              height={40}
             />
           ) : (
             <div className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center">
