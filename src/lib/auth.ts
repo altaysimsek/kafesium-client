@@ -18,7 +18,6 @@ export async function getUserSession() {
       return null;
     }
 
-    console.log(response);
 
     const user = await response.json();
     return user;
