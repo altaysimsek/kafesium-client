@@ -1,6 +1,7 @@
 import React from 'react';
 import { Trophy, Users, Zap } from 'lucide-react';
 import Image from 'next/image';
+import { WorldMapWithMarkers } from '@/components/worldmapwithmarkers';
 
 export default async function Home() {
     return (
@@ -61,6 +62,16 @@ export default async function Home() {
                   <div className="text-sm text-gray-400 mt-1">Avg Queue Time</div>
                 </div>
               </div>
+
+              {/* Server Locations */}
+              <section className="relative w-screen left-1/2 right-1/2 -mx-[50vw] min-h-[600px] flex flex-col items-center justify-center mt-20 overflow-hidden">
+                <h2 className="text-3xl font-bold mb-2 text-white z-10">Locations</h2>
+                <p className="text-gray-400 mb-8 z-10">Our game server locations around the world</p>
+                <div className="absolute inset-0 w-full h-full pointer-events-none select-none" aria-hidden="true"></div>
+                <div className="w-full z-10">
+                  <WorldMapWithMarkers />
+                </div>
+              </section>
             </div>
           </div>
         </div>
