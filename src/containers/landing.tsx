@@ -1,26 +1,11 @@
 import React from 'react';
 import { Trophy, Users, Zap } from 'lucide-react';
+import Image from 'next/image';
 
 export default async function Home() {
     return (
       <>
-        {/* Navbar */}
-        
-  
-        {/* Hero Section */}
         <div className="relative overflow-hidden py-6">
-          {/* Background Pattern */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-emerald-500/20"></div>
-            <div className="absolute top-0 left-0 w-full h-full">
-              <div className="grid grid-cols-8 gap-8 transform rotate-12 scale-150 opacity-30">
-                {Array.from({length: 64}).map((_, i) => (
-                  <div key={i} className="w-2 h-2 bg-green-500/20 rounded-full"></div>
-                ))}
-              </div>
-            </div>
-          </div>
-  
           <div className="relative z-10 max-w-7xl mx-auto px-6">
             <div className="text-center">
               {/* Main Heading */}
@@ -76,12 +61,8 @@ export default async function Home() {
                   <div className="text-sm text-gray-400 mt-1">Avg Queue Time</div>
                 </div>
               </div>
-  
             </div>
           </div>
-  
-          {/* Bottom Gradient */}
-          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent"></div>
         </div>
       </>
     );
