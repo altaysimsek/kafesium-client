@@ -1,12 +1,6 @@
-import { Navigation } from '@/components/shared/navigation';
-import Landing from '@/containers/landing';
-import { Footer } from '@/components/shared/footer';
-export default async function Home() {
+import { HomepageWrapper } from '@/containers/homepage/homepage-wrapper';
+export default async function App() {
   return (
-    <>
-      <Navigation />
-      <Landing />
-      <Footer />
-    </>
+    <HomepageWrapper />
   )
 }

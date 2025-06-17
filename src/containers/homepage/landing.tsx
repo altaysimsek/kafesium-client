@@ -3,7 +3,7 @@ import { Trophy, Users, Zap } from 'lucide-react';
 import Image from 'next/image';
 import { WorldMapWithMarkers } from '@/components/worldmapwithmarkers';
 
-export default async function Home() {
+export const Landing = () => {
     return (
       <>
         <div className="relative overflow-hidden py-6">
