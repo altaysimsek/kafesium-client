@@ -1,17 +1,17 @@
 # CS2 Arena
 
-CS2 Arena, Counter-Strike 2 oyuncuları için geliştirilmiş bir turnuva ve eşleşme platformudur. Steam entegrasyonu ile kolay giriş yapabilir, turnuvalara katılabilir ve diğer oyuncularla rekabet edebilirsiniz.
+CS2 Arena is a tournament and matchmaking platform developed for Counter-Strike 2 players. You can easily log in with Steam integration, join tournaments, and compete with other players.
 
-## Özellikler
+## Features
 
-- 🎮 Steam ile kolay giriş
-- 🏆 Turnuva sistemi
-- 👥 Takım oluşturma ve yönetme
-- 📊 Liderlik tablosu
-- 🎯 Eşleşme sistemi
-- 🌐 Modern ve responsive tasarım
+- 🎮 Easy login with Steam
+- 🏆 Tournament system
+- 👥 Team creation and management
+- 📊 Leaderboard
+- 🎯 Matchmaking system
+- 🌐 Modern and responsive design
 
-## Teknolojiler
+## Technologies
 
 - **Frontend:**
   - Next.js 14
@@ -26,71 +26,70 @@ CS2 Arena, Counter-Strike 2 oyuncuları için geliştirilmiş bir turnuva ve eş
   - MySQL
   - Steam API
 
-## Başlangıç
+## Getting Started
 
-### Gereksinimler
+### Requirements
 
-- Node.js 18 veya üzeri
-- npm veya yarn
+- Node.js 18 or higher
+- npm or yarn
 - MySQL
-- Steam API anahtarı
+- Steam API key
 
-### Kurulum
+### Installation
 
-1. Projeyi klonlayın:
+1. Clone the project:
    ```bash
    git clone https://github.com/yourusername/cs2-arena.git
    cd cs2-arena
    ```
 
-2. Bağımlılıkları yükleyin:
+2. Install dependencies:
    ```bash
    npm install
-   # veya
+   # or
    yarn install
    ```
 
-3. `.env` dosyasını oluşturun:
+3. Create a `.env` file:
    ```env
    NEXT_PUBLIC_BACKEND_URL=http://localhost:8000
    STEAM_API_KEY=your_steam_api_key
    ```
 
-4. Geliştirme sunucusunu başlatın:
+4. Start the development server:
    ```bash
    npm run dev
-   # veya
+   # or
    yarn dev
    ```
 
-5. Tarayıcınızda [http://localhost:3000](http://localhost:3000) adresini açın.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Proje Yapısı
+## Project Structure
 
 ```
 cs2-arena/
 ├── src/
 │   ├── app/              # Next.js app router
-│   ├── components/       # React bileşenleri
-│   ├── contexts/         # React context'leri
-│   ├── lib/             # Yardımcı fonksiyonlar
-│   ├── types/           # TypeScript tipleri
-│   └── styles/          # Global stiller
-├── public/              # Statik dosyalar
-└── prisma/             # Veritabanı şeması
+│   ├── components/       # React components
+│   ├── contexts/         # React contexts
+│   ├── lib/             # Helper functions
+│   ├── types/           # TypeScript types
+│   └── styles/          # Global styles
+├── public/              # Static files
+└── prisma/             # Database schema
 ```
 
-## Katkıda Bulunma
+## Contributing
 
-1. Bu depoyu fork edin
-2. Yeni bir branch oluşturun (`git checkout -b feature/amazing-feature`)
-3. Değişikliklerinizi commit edin (`git commit -m 'Add some amazing feature'`)
-4. Branch'inizi push edin (`git push origin feature/amazing-feature`)
-5. Bir Pull Request oluşturun
+1. Fork this repository
+2. Create a new branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push your branch (`git push origin feature/amazing-feature`)
+5. Create a Pull Request
 
-## Lisans
+## License
 
-
-## İletişim
+## Contact
 
 

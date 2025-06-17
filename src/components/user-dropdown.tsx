@@ -34,17 +34,17 @@ export function UserDropdown() {
         <div className="absolute top-full right-0 mt-2 w-48 bg-zinc-800 rounded-lg shadow-lg border border-zinc-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
           <div className="py-2">
             <a href="/profile" className="block px-4 py-2 text-sm text-gray-300 hover:bg-zinc-700 hover:text-green-400 transition-colors">
-              Profil
+              Profile
             </a>
             <a href="/settings" className="block px-4 py-2 text-sm text-gray-300 hover:bg-zinc-700 hover:text-green-400 transition-colors">
-              Ayarlar
+              Settings
             </a>
             <div className="border-t border-zinc-700 my-1"></div>
             <button
               onClick={() => redirect(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/auth/logout`)}
               className="w-full text-left px-4 py-2 text-sm text-red-400 hover:bg-zinc-700 hover:text-red-300 transition-colors"
             >
-              Çıkış Yap
+              Sign Out
             </button>
           </div>
         </div>
